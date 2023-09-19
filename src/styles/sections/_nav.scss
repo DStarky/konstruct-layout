@@ -1,25 +1,45 @@
 .nav {
-  padding: 2.4rem 0;
   border-bottom: 1px solid #E6E6E6;
-  
+  padding: 2.4rem 0;
+
   &__container {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+
+
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      /* Изменяем направление flex контейнера на вертикальное */
+      text-align: center;
+      /* Выравниваем текст по центру */
+    }
+
   }
 
   &__list {
     display: flex;
-    list-style-type: none;
     gap: 4rem;
+    list-style-type: none;
+
+    @media screen and (max-width: 768px) {
+      gap: 2rem;
+    }
+
+    @media screen and (max-width: 390px) {
+      gap: 1rem;
+    }
+
   }
 
   &__item {
     a {
-      text-decoration: none;
-      text-transform: uppercase;
       color: $main-color;
       font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
       transition: color .3s ease;
 
       &:active {
@@ -38,5 +58,8 @@
     display: block;
     height: 2.3rem;
     width: 10.2rem;
+
   }
+
+
 }
