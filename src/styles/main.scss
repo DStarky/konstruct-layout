@@ -1,0 +1,40 @@
+@import '../libs/normalize.min.css';
+@import 'variables';
+@import 'fonts';
+
+@import 'container';
+@import 'heading';
+@import 'buttons';
+
+@import './sections/hero';
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.76;
+  letter-spacing: 0.19;
+  color: $main-color;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
