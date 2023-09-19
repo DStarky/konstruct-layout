@@ -1,6 +1,10 @@
 .story {
   padding: 5.7rem 0 12rem 0;
 
+  @media screen and (max-width: 768px) {
+    padding-bottom: 6rem;
+  }
+
   &__container {
     text-align: center;
   }

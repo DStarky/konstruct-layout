@@ -7,4 +7,11 @@
   outline: none;
   padding: 1.1rem 2.9rem;
   text-transform: uppercase;
+  transition: filter .3s ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
 }
