@@ -5,6 +5,10 @@
     padding-bottom: 6rem;
   }
 
+  @media screen and (max-width: 576px) {
+    padding-top: 3rem;
+  }
+
   &__container {
     text-align: center;
   }
