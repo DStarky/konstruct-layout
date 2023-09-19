@@ -1,0 +1,134 @@
+.story {
+  padding: 5.7rem 0 12rem 0;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+    position: relative;
+    display: inline;
+
+
+    &::after {
+      content: '';
+      width: 5rem;
+      height: 0.2rem;
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $accent-color;
+    }
+  }
+
+  &__content {
+    margin-top: 8.4rem;
+    display: flex;
+    gap: 7.6rem;
+
+    @media screen and (max-width: 998px) {
+      gap: 1.2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 4rem;
+    }
+  }
+
+  &__text {
+    flex-basis: 40rem;
+    text-align: left;
+
+    @media screen and (max-width: 768px) {
+      flex-basis: auto;
+    }
+  }
+
+  &__strong {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__accent {
+    color: $accent-color;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+
+    @media screen and (max-width: 998px) {
+      flex-grow: 1;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: row;
+      margin-top: 2rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__item {
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+
+  &__card {
+    height: 22.4rem;
+    width: 14rem;
+    padding: 1.6rem;
+    text-align: left;
+
+    @media screen and (max-width: 998px) {
+      height: 10rem;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      height: 22.4rem;
+    }
+  }
+
+  &__card-title {
+    width: min-content;
+    font-weight: 800;
+
+    text-transform: uppercase;
+  }
+}
+
+.card-1 {
+  background-image: url('/img/card-1.png');
+  background-position: 90% 50%;
+  background-size: cover;
+
+  @media screen and (max-width: 998px) {
+    background-position: 50% 30%;
+  }
+}
+
+.card-2 {
+  background-image: url('/img/card-2.png');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.card-3 {
+  background-image: url('/img/card-3.png');
+  background-position: 50% 50%;
+  background-size: cover;
+}
