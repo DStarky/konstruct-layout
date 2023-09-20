@@ -1,0 +1,15 @@
+.action {
+  background-image: url('img/bg-footer.png');
+  background-size: cover;
+  padding: 12rem 0 24rem;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    max-width: 35rem;
+    margin: 0 auto 3.5rem;
+  }
+
+}
