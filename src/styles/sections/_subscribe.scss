@@ -1,0 +1,56 @@
+.subscribe {
+  background-color: $bg-dark;
+  text-align: center;
+  padding: 30px 0;
+
+  &__container {
+    gap: 1.6rem 8.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &>* {
+      flex-shrink: 0;
+    }
+  }
+
+  &__title {}
+
+  &__form {
+    display: flex;
+    align-items: center;
+
+    &:focus-within {
+      outline: $accent-color 1px solid;
+      outline-offset: 0.5rem;
+    }
+  }
+
+  &__input {
+    padding: 1.1rem 10rem 1.1rem 1.6rem;
+    border: none;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding: 1.1rem 1.6rem;
+    }
+
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    padding: 1.1rem 5rem;
+
+    @media screen and (max-width: 576px) {
+      padding: 1.1rem 2.2rem;
+    }
+  }
+}

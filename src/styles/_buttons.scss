@@ -14,4 +14,9 @@
       filter: brightness(1.1);
     }
   }
+
+  &:focus-visible {
+    outline: $accent-color 1px solid;
+    outline-offset: 0.5rem;
+  }
 }
