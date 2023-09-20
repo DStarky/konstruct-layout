@@ -1,0 +1,114 @@
+.info {
+  background-color: $info-bg;
+
+  color: $color-white;
+  font-size: 1.1rem;
+  padding: 4rem 0 5rem 0;
+
+  &__container {
+    display: grid;
+    grid-template-areas: "company . . . links . . contact . ."
+      "info info info . list-1 list-2 list-3 adress . social"
+    ;
+    grid-template-columns: repeat(10, 1fr);
+
+    
+
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  &__company {
+    grid-area: company;
+  }
+
+  &__links {
+    grid-area: links;
+  }
+
+  &__contact {
+    grid-area: contact;
+  }
+
+  &__info {
+    grid-area: info;
+  }
+
+  &__logo {
+    display: inline;
+    height: 2.3rem;
+    width: 10.2rem;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__link {
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__adresses {
+    grid-area: adress;
+
+
+    &>a {
+      color: $color-white;
+      display: inline-block;
+      text-decoration: none;
+
+    }
+
+    &>*:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+
+  &__social {
+    display: flex;
+    gap: 2.5rem;
+    grid-area: social;
+  }
+
+  &__icon {
+    display: block;
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+}
+
+.list-1 {
+  grid-area: list-1;
+}
+
+.list-2 {
+  grid-area: list-2;
+}
+
+.list-3 {
+  grid-area: list-3;
+}
+
+.info-icon-1 {
+  background-image: url('img/facebook.svg');
+  background-size: cover;
+  filter: brightness(0) invert(1);
+}
+
+.info-icon-2 {
+  background-image: url('img/twitter.svg');
+  background-size: cover;
+  filter: brightness(0) invert(1);
+}
+
+.info-icon-3 {
+  background-image: url('img/google.svg');
+  background-size: cover;
+  filter: brightness(0) invert(1);
+}
