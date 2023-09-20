@@ -7,12 +7,31 @@
 
   &__container {
     display: grid;
-    grid-template-areas: "company . . . links . . contact . ."
-      "info info info . list-1 list-2 list-3 adress . social"
+    gap: 1rem;
+    grid-template-areas: "company . . links . . contact . ."
+      "info info info lists lists lists adress adress social"
     ;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(8, 1fr);
 
-    
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-areas: "company . . . links . . "
+        "info info info . lists lists lists"
+        "contact . . . . . ."
+        "adress . social . . . ."
+      ;
+    }
+
+    @media screen and (max-width:576px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "company . ."
+        "info info info"
+        "links . ."
+        "lists lists lists"
+        "contact . ."
+        "adress . social"
+      ;
+    }
 
   }
 
@@ -55,6 +74,7 @@
 
   &__adresses {
     grid-area: adress;
+    max-width: 10rem;
 
 
     &>a {
@@ -81,19 +101,15 @@
     height: 1.2rem;
     width: 1.2rem;
   }
+
+  &__lists {
+    grid-area: lists;
+    display: flex;
+    gap: 3rem;
+  }
 }
 
-.list-1 {
-  grid-area: list-1;
-}
 
-.list-2 {
-  grid-area: list-2;
-}
-
-.list-3 {
-  grid-area: list-3;
-}
 
 .info-icon-1 {
   background-image: url('img/facebook.svg');
